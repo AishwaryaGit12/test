@@ -9,7 +9,7 @@ resource kv 'Microsoft.KeyVault/vaults@2019-09-01' existing = {
   scope: resourceGroup(keyVaultResourceGroup)
 }
 
-module sqlServerDeployment '../modules/SQLserver.bicep' = {
+module sqlServerDeployment 'modules/SQLserver.bicep' = {
   name: 'sqlServerDeployment'
   params: {
     administratorLogin: administratorLogin
